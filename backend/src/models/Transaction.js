@@ -1,9 +1,10 @@
 'use strict';
 
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 
 const TransactionSchema = new Schema(
   {
+    user: { type: Types.ObjectId, ref: 'User', required: true },
     amount: { type: Number, required: true },
     category: { type: String, required: true, trim: true },
     type: { type: String, required: true, enum: ['income', 'expense'] },

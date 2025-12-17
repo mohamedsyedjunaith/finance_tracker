@@ -2,11 +2,13 @@
 
 const Transaction = require('./Transaction');
 const BudgetGoal = require('./BudgetGoal');
-const UserCredential = require('./UserCredential');
+const Income = require('./Income');
+const User = require('./User');
 
 module.exports = {
   Transaction,
   BudgetGoal,
-  UserCredential
+  Income,
+  User
 };
 

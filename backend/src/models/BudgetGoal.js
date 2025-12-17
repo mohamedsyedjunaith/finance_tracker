@@ -1,9 +1,10 @@
 'use strict';
 
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 
 const BudgetGoalSchema = new Schema(
   {
+    user: { type: Types.ObjectId, ref: 'User', required: true },
     category: { type: String, required: true, trim: true },
     goalAmount: { type: Number, required: true },
     currentSpent: { type: Number, required: true, default: 0 },
